@@ -5,7 +5,10 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 const Constraint = Matter.Constraint;
 var tree, treeImg, stone, stoneImg, ground, boy, boyImg;
-
+function preload()
+{
+  bagImg=loadImage("bag.png")
+}
 
 
 function setup() {
@@ -37,11 +40,11 @@ function draw() {
   rectMode(CENTER);
   background(500);
 
-  background("cyan")
+  background(bagImg)
   fill('red');
   textSize(24);
   text("PRESS SPACE TO GET A SECOND CHANCE TO PLAY", 200,200);
-  ground.display();
+  //ground.display();
   tree.display();
   boy.display();
   stone.display();
@@ -52,7 +55,7 @@ function draw() {
   mango5.display();
   mango6.display();
   mango7.display();
-  chain.display();
+  //chain.display();
 
   detectCollision(stone, mango1);
   detectCollision(stone, mango2);
